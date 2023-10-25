@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="/pages/game/app.css" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory | Jeu</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- APP TITLE -->
+      <h1 class="text-center">
+        <span class="small">ENI</span> - MEMORY -
+        <span class="small">JEU</span>
+      </h1>
+      <!-- APP NAVIGATION -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../../index.html">Accueil</a></li>
+          <li class="nav-item nav-signup-btn">
+            <a href="../signup/signup.html">S'inscrire</a>
+          </li>
+          <li class="nav-item nav-signin-btn">
+            <a href="../signin/signin.html">Se connecter</a>
+          </li>
+          <li class="nav-item nav-profile-btn hidden">
+            <a href="../profile/profile.html">Profil</a>
+          </li>
+          <li class="nav-item"><a href="./memory.html">Jouer</a></li>
+          <li class="nav-item nav-logout-btn hidden">
+            <button class="nav-item logout-btn">Deconnexion</button>
+          </li>
+        </ul>
+      </nav>
+      <!-- APP -->
+      <main class="container memory">
+        <p class="text-center indication-heading">
+          Tentez de gagner avec le moins d'essais possible.
+        </p>
+        <p class="text-center">
+          Appoyez sur la <strong>barre d'espace</strong> pour relancer le jeu
+        </p>
+        <p class="text-center mb-20">
+          Nombre de coups : <span id="score">0</span>
+        </p>
+        <div class="memory-container">
+          <div class="memory-grid"></div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/pages/game/app.js"></script>
+    <script src="/shared/header.js"></script>
+  </body>
+</html>

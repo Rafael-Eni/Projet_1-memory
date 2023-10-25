@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory | Accueil</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- APP TITLE -->
+      <h1 class="text-center">
+        <span class="small">ENI</span> - MEMORY -
+        <span class="small">Accueil</span>
+      </h1>
+      <!-- APP NAVIGATION -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/index.html">Accueil</a></li>
+          <li class="nav-item nav-signup-btn">
+            <a href="/pages/signup/signup.html">S'inscrire</a>
+          </li>
+          <li class="nav-item nav-signin-btn">
+            <a href="/pages/signin/signin.html">Se connecter</a>
+          </li>
+          <li class="nav-item nav-profile-btn hidden">
+            <a href="/pages/profile/profile.html">Profil</a>
+          </li>
+          <li class="nav-item"><a href="/pages/game/memory.html">Jouer</a></li>
+          <li class="nav-item nav-logout-btn hidden">
+            <button class="nav-item logout-btn">Deconnexion</button>
+          </li>
+        </ul>
+      </nav>
+      <!-- APP HOME -->
+      <main class="container home">
+        <p>Bienvenue sur le site du Memory de l'ENI.</p>
+        <p>Venez jouer avec nous et faites le meilleur score possible</p>
+        <h4>Règle du jeu :</h4>
+        <ul>
+          <li>
+            - Retournez les deux cartes. Si les images sont identiques, le jeu
+            laisse les cartes visibles.
+          </li>
+          <li>
+            - Si les immages sont différentes, les cartes se retournent faces
+            cachées là où ekkes étaient.
+          </li>
+          <li>
+            - La partie est terminée lorsque toutes les cartes ont été
+            assemblées par faires
+          </li>
+        </ul>
+        <img
+          src="ressources\memory-legume\memory_detail.png"
+          alt="memory game board exemple"
+        />
+        <p>
+          Si vous voulez vous souvenir de votre score. Inscrivez-vous via le
+          formulaire.
+        </p>
+        <p>Le jeu garde les <strong>5 meilleurs</strong> scores.</p>
+        <p>
+          Si vous voulez relancer une partie cliquez sur
+          <strong>la barre d'esace</strong>.
+        </p>
+      </main>
+    </div>
+    <script src="/shared/header.js"></script>
+  </body>
+</html>

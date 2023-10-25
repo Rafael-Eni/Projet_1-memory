@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="./profile.css" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory | Profil</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- APP TITLE -->
+      <h1 class="text-center">
+        <span class="small">ENI</span> - MEMORY -
+        <span class="small">Profile</span>
+      </h1>
+      <!-- APP NAVIGATION -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../../index.html">Accueil</a></li>
+          <li class="nav-item nav-signup-btn">
+            <a href="../signup/signup.html">S'inscrire</a>
+          </li>
+          <li class="nav-item nav-signin-btn">
+            <a href="../signin/signin.html">Se connecter</a>
+          </li>
+          <li class="nav-item nav-profile-btn hidden">
+            <a href="./profile.html">Profil</a>
+          </li>
+          <li class="nav-item"><a href="../game/memory.html">Jouer</a></li>
+          <li class="nav-item nav-logout-btn hidden">
+            <button class="nav-item logout-btn">Deconnexion</button>
+          </li>
+        </ul>
+      </nav>
+      <!-- PROFILE -->
+      <main class="container profile">
+        <!-- HEADING -->
+        <div class="profile-heading">
+          <h4>Profil de <span class="header-username"></span></h4>
+          <div class="rounded">
+            <img src="/ressources/avatar.webp" alt="Avatar profile" />
+          </div>
+        </div>
+        <!-- USER INFORMATION -->
+        <div class="profile-info">
+          <div class="input-group">
+            <label>Nom d'utilisateur :</label>
+            <div class="input-container">
+              <input type="text" class="w-100 mb-5" id="username" disabled />
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Email :</label>
+            <div class="input-container">
+              <input class="w-100 mb-5" type="text" id="email" disabled />
+            </div>
+          </div>
+        </div>
+        <!-- USER PREFERENCES -->
+        <div class="profile-preferences">
+          <h4>Choix du memory :</h4>
+          <select name="memory-name" id="memory-name"></select>
+          <div class="preferences-img-container">
+            <img
+              src="../../ressources/memory-legume/memory_detail.png"
+              alt="Grid screenshot"
+              id="screenshot"
+            />
+          </div>
+          <h4>Taille du memory :</h4>
+          <select name="memory-size" id="memory-size"></select>
+        </div>
+        <!-- USER SCORE HISTORY -->
+        <div class="history-container">
+          <h2 class="text-center">Derniers Scores :</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Pseudo</th>
+                <th>Score</th>
+                <th>Taille</th>
+                <th>Choix Memory</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody class="history-content"></tbody>
+          </table>
+        </div>
+        <!-- SAVE CHANGES -->
+        <div class="action-group">
+          <button type="submit" class="btn save-btn">
+            Enregistrer l'option
+          </button>
+        </div>
+      </main>
+    </div>
+    <script src="/shared/header.js"></script>
+    <script type="module" src="./profile.js"></script>
+  </body>
+</html>

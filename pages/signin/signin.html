@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory | Connexion</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- APP TITLE -->
+      <h1 class="text-center">
+        <span class="small">ENI</span> - MEMORY -
+        <span class="small">Connexion</span>
+      </h1>
+      <!-- APP NAVIGATION -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../../index.html">Accueil</a></li>
+          <li class="nav-item nav-signup-btn">
+            <a href="../signup/signup.html">S'inscrire</a>
+          </li>
+          <li class="nav-item nav-signin-btn">
+            <a href="./signin.html">Se connecter</a>
+          </li>
+          <li class="nav-item nav-profile-btn hidden">
+            <a href="../profile/profile.html">Profil</a>
+          </li>
+          <li class="nav-item"><a href="../game/memory.html">Jouer</a></li>
+          <li class="nav-item nav-logout-btn hidden">
+            <button class="nav-item logout-btn">Deconnexion</button>
+          </li>
+        </ul>
+      </nav>
+      <!-- SIGNIN FORM -->
+      <form class="container signin">
+        <h1 class="text-center">Connectez vous.</h1>
+        <div class="input-group">
+          <label for="email">Entrez votre email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Votre email"
+            autocomplete="off"
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Mot de passe</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="3 caractères minimum"
+            autocomplete="off"
+          />
+        </div>
+        <div class="action-group">
+          <button type="submit" class="btn submit-btn">Connexion</button>
+          <button type="button" class="btn cancel-btn">Annuler</button>
+        </div>
+      </form>
+      <script src="./signin.js"></script>
+      <script src="/shared/header.js"></script>
+    </div>
+  </body>
+</html>

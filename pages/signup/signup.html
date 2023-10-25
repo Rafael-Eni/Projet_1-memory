@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory | Inscription</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- APP TITLE -->
+      <h1 class="text-center">
+        <span class="small">ENI</span> - MEMORY -
+        <span class="small">Inscription</span>
+      </h1>
+      <!-- APP NAVIGATION -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../../index.html">Accueil</a></li>
+          <li class="nav-item nav-signup-btn">
+            <a href="./signup.html">S'inscrire</a>
+          </li>
+          <li class="nav-item nav-signin-btn">
+            <a href="../signin/signin.html">Se connecter</a>
+          </li>
+          <li class="nav-item nav-profile-btn hidden">
+            <a href="../profile/profile.html">Profil</a>
+          </li>
+          <li class="nav-item"><a href="../game/memory.html">Jouer</a></li>
+          <li class="nav-item nav-logout-btn hidden">
+            <button class="nav-item logout-btn">Deconnexion</button>
+          </li>
+        </ul>
+      </nav>
+      <!-- SIGNUP FORM -->
+      <form class="container signup">
+        <h1 class="text-center">Inscrivez vous.</h1>
+        <div class="input-group">
+          <label for="username">Nom d'utilisateur</label>
+          <div class="input-container">
+            <input
+              type="text"
+              class="w-100 mb-5"
+              name="username"
+              id="username"
+              placeholder="3 caractères minimum"
+              autocomplete="off"
+            />
+          </div>
+          <img
+            class="username-img-indicator"
+            src="/ressources/error.svg"
+            alt="error icon"
+          />
+          <p class="username-error hint error"></p>
+        </div>
+        <div class="input-group">
+          <label for="email">Entrez votre email</label>
+          <div class="input-container">
+            <input
+              class="w-100 mb-5"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Votre email"
+              autocomplete="off"
+            />
+          </div>
+          <img
+            class="email-img-indicator"
+            src="/ressources/error.svg"
+            alt="error icon"
+          />
+          <p class="email-error hint error"></p>
+        </div>
+        <div class="input-group">
+          <label for="password">Mot de passe</label>
+          <div class="input-container">
+            <input
+              class="w-100 mb-5"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="3 caractères minimum"
+              autocomplete="off"
+            />
+          </div>
+          <img
+            class="password-img-indicator"
+            src="/ressources/error.svg"
+            alt="error icon"
+          />
+          <p class="password-hint hint mb-10">
+            Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.
+          </p>
+          <div class="password-indicator">
+            <div class="indicator-container weak">
+              <div class="bar mb-5"></div>
+              <p class="text-center hint">faible</p>
+            </div>
+            <div class="indicator-container medium">
+              <div class="bar mb-5"></div>
+              <p class="text-center hint">moyen</p>
+            </div>
+            <div class="indicator-container strong">
+              <div class="bar mb-5"></div>
+              <p class="text-center hint">fort</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="confirmation">Confirmez le mot de passe</label>
+          <div class="input-container">
+            <input
+              class="w-100 mb-5"
+              type="password"
+              name="confirmation"
+              id="confirmation"
+              placeholder="Confirmez le mot de passe"
+              autocomplete="off"
+            />
+            <img
+              class="confirmation-img-indicator"
+              src="/ressources/error.svg"
+              alt="error icon"
+            />
+            <p class="confirm-error hint error"></p>
+          </div>
+        </div>
+        <div class="action-group">
+          <button type="submit" class="btn submit-btn" disabled>
+            Création du compte
+          </button>
+          <button type="button" class="btn cancel-btn">Annuler</button>
+        </div>
+      </form>
+    </div>
+    <script src="signup.js"></script>
+    <script src="/shared/header.js"></script>
+  </body>
+</html>

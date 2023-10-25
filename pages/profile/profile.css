@@ -1,0 +1,47 @@
+.profile-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+.rounded {
+  width: 110px;
+  height: 110px;
+  border-radius: 9999px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid #f1f1f1;
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+select,
+option {
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+}
+
+.preferences-img-container {
+  max-width: 70%;
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+  border: 2px solid #f1f1f1;
+  border-collapse: collapse;
+}
+
+th,
+td,
+tr {
+  border: 2px solid #f1f1f1;
+  text-align: center;
+}

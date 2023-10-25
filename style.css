@@ -1,0 +1,294 @@
+/* ========== INITIALISATION ========== */
+:root {
+  --font-family: "Playpen Sans", cursive;
+  --border-radius: 5px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  color: #f1f1f1;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background: rgb(111, 175, 203);
+  background: linear-gradient(
+    315deg,
+    rgba(111, 175, 203, 1) 18%,
+    rgba(254, 255, 0, 1) 100%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.app-container {
+  max-width: 700px;
+  width: 100%;
+}
+
+.container {
+  padding: 2rem;
+  background-color: #000;
+  border-radius: var(--border-radius);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 80px;
+}
+
+/* ========== UTILS ========== */
+.text-center {
+  text-align: center;
+}
+.small {
+  font-weight: 400;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.hint {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #ccc;
+}
+
+.error {
+  color: red;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  color: #000;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  border: 2px solid #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #f1f1f144;
+  color: #f1f1f1;
+}
+
+.btn:active {
+  transform: scale(1.02);
+  transition: transition 0.2s;
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes formError {
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+/* @keyframes formError {
+  20% {
+    background-color: #ffff00;
+  }
+  40% {
+    background-color: #2fff00;
+  }
+  60% {
+    background-color: #ff00bf;
+  }
+  80% {
+    background-color: #ffdd00;
+  }
+  100% {
+    background-color: aqua;
+    transform: rotate(1080deg);
+  }
+} */
+
+/* ========== HEADER ========== */
+.nav {
+  background-color: #000;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  padding: 0.2rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-item {
+  padding: 5px 8px;
+  border-radius: var(--border-radius);
+}
+
+.nav-item:hover {
+  background-color: #ffffff3b;
+}
+
+.nav-item a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.logout-btn {
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+/* ========== HOME ========== */
+
+.home p,
+.home li {
+  line-height: 1.7rem;
+  font-size: 0.9rem;
+}
+
+.home img {
+  display: block;
+  width: 50%;
+  margin: 2rem auto;
+}
+
+/* ========== FORMS ========== */
+.signup.form-error {
+  animation: formError 0.4s;
+}
+
+.signin.form-error {
+  animation: formError 0.4s;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  outline: none;
+}
+
+.input-group img {
+  position: absolute;
+  height: 25px;
+  top: 25%;
+  right: -47%;
+  display: none;
+}
+
+.action-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-top: 2.5rem;
+}
+
+/* ========== MEMORY GAME PAGE ========== */
+.memory-container {
+  display: flex;
+  justify-content: center;
+}
+.memory-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(4, 100px);
+  gap: 0.3rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: 0.8rem;
+}
+
+/* ========== MEMORY FORM PAGE ========== */
+.password-indicator {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.indicator-container {
+  flex-basis: 30%;
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+}
+
+.weak,
+.medium,
+.strong {
+  display: none;
+}
+
+.weak .bar {
+  background-color: #ff4500;
+}
+
+.medium .bar {
+  background-color: #ffff00;
+}
+
+.strong .bar {
+  background-color: #1cb317;
+}
