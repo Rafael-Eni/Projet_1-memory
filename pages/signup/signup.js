@@ -103,6 +103,8 @@ function checkConfirmation(e) {
 
   if (!validationGroup.password) {
     errorMessage.innerText = "Renseignez d'abord un mot de passe valide";
+    indicator.style.display = "block";
+
     validationGroup.confirm = false;
   } else {
     if (confirmValue !== passwordValue) {

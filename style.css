@@ -213,7 +213,6 @@ body {
 }
 
 .input-group {
-  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
@@ -226,7 +225,11 @@ body {
   outline: none;
 }
 
-.input-group img {
+.input-container {
+  position: relative;
+}
+
+.input-container img {
   position: absolute;
   height: 25px;
   top: 25%;
