@@ -4,6 +4,9 @@ const passwordInput = document.getElementById("password");
 const confirmationInput = document.getElementById("confirmation");
 const submitBtn = document.querySelector(".submit-btn");
 
+const isValidErrorIndicator = "/ressources/error.svg";
+const isValidCheckIndicator = "/ressources/check.svg";
+
 let validationGroup = {
   username: false,
   email: false,
@@ -24,14 +27,16 @@ function checkUsername(e) {
   const indicator = document.querySelector(".username-img-indicator");
   const value = e.target.value;
 
+  indicator.style.display = "block";
+
   if (value.length < 3) {
     errorMessage.innerText =
       "Choisissez un nom contendant au moins 3 caractères";
-    indicator.style.display = "block";
+    indicator.src = isValidErrorIndicator;
     validationGroup.username = false;
   } else {
     errorMessage.innerText = "";
-    indicator.style.display = "none";
+    indicator.src = isValidCheckIndicator;
     validationGroup.username = true;
   }
   toggleSubmitBtn();
@@ -42,13 +47,15 @@ function checkEmail(e) {
   const indicator = document.querySelector(".email-img-indicator");
   const value = e.target.value;
 
+  indicator.style.display = "block";
+
   if (!value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
     errorMessage.innerText = "Renseignez un email valide";
-    indicator.style.display = "block";
+    indicator.src = isValidErrorIndicator;
     validationGroup.email = false;
   } else {
     errorMessage.innerText = "";
-    indicator.style.display = "none";
+    indicator.src = isValidCheckIndicator;
     validationGroup.email = true;
   }
   toggleSubmitBtn();
@@ -69,6 +76,8 @@ function checkPassword(e) {
     indicator.style.display = "none";
   });
 
+  indicator.style.display = "block";
+
   if (value.length >= 6) {
     strenghValue++;
 
@@ -83,10 +92,10 @@ function checkPassword(e) {
 
   if (strenghValue === 3) {
     validationGroup.password = true;
-    indicator.style.display = "none";
+    indicator.src = isValidCheckIndicator;
   } else {
     validationGroup.password = false;
-    indicator.style.display = "block";
+    indicator.src = isValidErrorIndicator;
   }
 
   for (let i = 0; i < strenghValue; i++) {
@@ -101,19 +110,20 @@ function checkConfirmation(e) {
   const indicator = document.querySelector(".confirmation-img-indicator");
   const confirmValue = e.target.value;
 
+  indicator.style.display = "block";
+
   if (!validationGroup.password) {
     errorMessage.innerText = "Renseignez d'abord un mot de passe valide";
-    indicator.style.display = "block";
-
+    indicator.src = isValidErrorIndicator;
     validationGroup.confirm = false;
   } else {
     if (confirmValue !== passwordValue) {
       errorMessage.innerText = "Renseignez deux mot de passe identique";
-      indicator.style.display = "block";
+      indicator.src = isValidErrorIndicator;
       validationGroup.confirm = false;
     } else {
       errorMessage.innerText = "";
-      indicator.style.display = "none";
+      indicator.src = isValidCheckIndicator;
       validationGroup.confirm = true;
     }
   }
